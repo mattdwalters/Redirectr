@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Redirectr</title>
+		<link rel = "stylesheet" type = "text/css" href = "css/style.css">
+		<link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link href = "https://font.googleapis.com/css?family=Quicksand" rel = "stylesheet">
+		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="js/scripts.js"></script>
+	</head>
+
+	<body id = "popup-body">
+		<h3>Redirectr</h3>
+		<div class = "container">
+			<form>
+				Site: <input id = "site" class = "input" type = "text"><br>
+				Redirect to: <input id = "redirect" class = "input" type = "text"><br>
+			</form>
+		</div>
+		<div id = "button-container" class = "container col-xs-12">
+			<button id = "add" type = "submit" class = "opt-btn options btn">Add</button>
+			<form id = "redirect_page" class = "options" 
+				action = "redirect_list.html" method = "get">
+				<button class = "opt-btn btn">Redirects</button>
+			</form>
+		</div>
+	</body>
+</html>

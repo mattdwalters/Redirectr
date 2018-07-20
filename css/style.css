@@ -1,0 +1,33 @@
+#popup-body {
+	text-align: center;
+	font-family: Quicksand;
+	background-color: #5487dc;
+	color: #fff;
+}
+
+#button-container {
+	margin: 1em 0em 1em 0em;
+	display: inline-block;
+}
+
+.input {
+	color: #000;
+}
+
+.options {
+	display:inline-block;
+}
+
+.opt-btn {
+	border: 2px solid white !important;
+	background-color: #5487dc;
+	transition: 0.2s all;
+}
+
+.opt-btn:hover {
+	background-color: #fff;
+	color: #5487dc;
+}
+
+.remove {
+}
