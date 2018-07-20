@@ -1,21 +1,21 @@
 {
 	"manifest_version": 2,
 	"name": "Redirectr",
-	"description": "Easily set up redirects within chrome.",
+	"description": "Easily setup redirects within chrome.",
 	"version": "1",
 	"author": "Matt Walters",
-
+	
 	"background": {
 		"scripts":["js/redirect.js"]
 	},
-
+ 
 	"browser_action": {
-		"default_icon": "images/redirectr_logo.png",
+		"default_icon": "tab-icon.png",
 		"default_popup": "popup.html",
 		"default_title": "Redirectr"
 	},
-
+	
 	"permissions": ["<all_urls>", "webRequest", "webRequestBlocking"],
-
+	
 	"content_security_policy": "script-src 'self' https://*.bootstrapcdn.com https://*.googleapis.com ; object-src 'self'"
 }

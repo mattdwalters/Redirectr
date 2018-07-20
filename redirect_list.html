@@ -1,29 +1,30 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Redirect List</title>
-		<link rel = "stylesheet" type = "text/css" href = "css/style.css">
+		<title>Test</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link href = "https://font.googleapis.com/css?family=Quicksand" rel = "stylesheet">
-		<script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="js/scripts.js"></script>
 	</head>
-	<body>
-		<form action ="popup.html" method = "get">
-			<input type = "submit" value = "<- Back" 
-				name = "Submit" class = "btn btn-primary col-xs-6"/>
-		</form>
-		<button id = "refresh">Refresh</button>
-		<button id = "clear">Clear</button>
-		<table id = "myTable" class = "table table-striped">
-			<thead>
-				<tr>
-					<th class = "table-col">Site</th>
-					<th class = "table-col">Redirect</th>
-					<th class = "table-col">Delete</th>
-				</tr>
-			</thead>
-			<tbody id = "table_body"></tbody>
+	<body class = "popup-body">
+		<div class = "container col-xs-12 button-container">
+			<form action="popup.html" method="get">
+				<button class = "opt-btn btn">&#8592;</button>
+			</form>
+		</div>
+	    <table id="rdr_table" class = "table">
+	    	<thead>
+	    		<tr>
+	    			<th class = "table-col"></th>
+	    			<th class = "table-col">Site</th>
+	    			<th class = "table-col">Redirect</th>
+	    			<th class = "table-col"></th>
+	    		</tr>
+	    	</thead>
+          	<tbody id = "table_body"></tbody>
 		</table>
+		<br>
 	</body>
 </html>
