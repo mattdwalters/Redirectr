@@ -1,13 +1,43 @@
-#popup-body {
+.popup-body {
 	text-align: center;
-	font-family: Quicksand;
 	background-color: #5487dc;
 	color: #fff;
+	font-family: Quicksand;
 }
 
-#button-container {
+.body {
+	background-color: #5487dc;
+}
+
+#options {
+	float: right;
+	margin: 0.5em 0em -1em 0em;
+	background-color: #5487dc;
+	color: #fff;
+	border: 0;
+	box-shadow: none;
+}
+
+.opt-box {
+	background-color: #fd4242 !important;
+}
+
+#rdr_table {
+	min-width: 200px;
+}
+
+#table_body {
+	background-color: #fff;
+	color: #000;
+}
+
+.hidden {
+	display: none;
+}
+
+.button-container {
 	margin: 1em 0em 1em 0em;
-	display: inline-block;
+	display:inline-block;
 }
 
 .input {
@@ -24,10 +54,59 @@
 	transition: 0.2s all;
 }
 
-.opt-btn:hover {
+.opt-btn:hover, .opt-button:active, .opt-button:visited{
 	background-color: #fff;
-	color: #5487dc;
+	color: #5487dc !important;
 }
 
-.remove {
+.remove, .edit{
+	border-radius: 50%;
+	background-color: #fff;
+	color: #000;
+	border: 0;
+	box-shadow: none;
+}
+
+.overlay {
+    height: 0%;
+    width: 100%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    overflow-y: hidden;
+    transition: 0.5s;
+    font-family: Quicksand;
+}
+
+.overlay-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.overlay a {
+    text-decoration: none;
+    color: #5487dc;
+    display: block;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.overlay #closebtn {
+    position: absolute;
+    top: 5px;
+    right: 20px;
+    font-size: 20px
+}
+
+#opt-www-label {
+	color: #000 !important;
 }
