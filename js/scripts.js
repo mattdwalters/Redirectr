@@ -65,6 +65,9 @@ function addRedirect() {
 	var redirect = document.getElementById('redirect').value;
 	var blank_input = /^\s*$/;
 	var www_test = /\..*\./;
+	var warning_string = /\/.+/;
+	var confirmed = true;
+	$("#notification").addClass("hidden");
 		
 	if (site.match(blank_input) || redirect.match(blank_input)) {
 		updateNotification("Please enter valid values");
@@ -78,24 +81,29 @@ function addRedirect() {
 	if (!redirect.match(www_test) && $("#opt-www").is(":checked")) {
 		redirect = "www." + redirect;
 	}
-	
-	var redirects = getRedirects();
-	redirects.push([site, redirect]);
-	setRedirects(redirects);
-	$("#site").val("");
-	$("#redirect").val("");
-	
-	var add_btn = $("#add");
-	console.log(add_btn.text());
-	add_btn.html("&#10004;");
-	setTimeout(function() {
-		add_btn.html("Add");
-	}, 1100);
+
+	if ((site.match(warning_string) || redirect.match(warning_string)) && !$("#opt-warn").is(":checked")) {
+		confirmed = confirm("This action will ONLY direct the site entered to the redirect.\n\nAre you sure you want to redirect for these links?\n\nSite: " + site + "\nRedirect: " + redirect);
+	}
+
+	if(confirmed) {
+		var redirects = getRedirects();
+		redirects.push([site, redirect]);
+		setRedirects(redirects);
+		$("#site").val("");
+		$("#redirect").val("");
+		
+		var add_btn = $("#add");
+		console.log(add_btn.text());
+		add_btn.html("&#10004;");
+		setTimeout(function() {
+			add_btn.html("Add");
+		}, 1100);
+	}
 }
 
 function updateNotification(message) {
 	var notification = $("#notification");
-	console.log(notification.text());
 	notification.text(message);
 	notification.removeClass("hidden");
 }
@@ -115,6 +123,8 @@ function editRedirect() {
     if ($(this).html() === String.fromCharCode(9998)) {                  
         $.each(currentTd, function () {
         	$(this).prop('contenteditable', true)
+        	$(this).css("color", "#a0a0a0");
+        	$(this).css("font-style", "italic");
         });
     } else {
     	$.each(currentTd, function () {

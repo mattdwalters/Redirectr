@@ -9,6 +9,16 @@
 	background-color: #5487dc;
 }
 
+#logo {
+	width: 50px;
+	height: 50px;
+}
+
+#header {
+	margin-top: 0;
+	font-family: Nunito;
+}
+
 #options {
 	float: right;
 	margin: 0.5em 0em -1em 0em;
@@ -23,7 +33,8 @@
 }
 
 #rdr_table {
-	min-width: 200px;
+	min-width: 300px;
+	background-color: transparent;
 }
 
 #table_body {
@@ -54,9 +65,16 @@
 	transition: 0.2s all;
 }
 
-.opt-btn:hover, .opt-button:active, .opt-button:visited{
-	background-color: #fff;
+.opt-btn:hover, .opt-button:active, .opt-button:visited, .opt-button:focus{
+	background-color: #fff !important;
 	color: #5487dc !important;
+	outline:none !important;
+}
+
+#back-btn {
+	position: absolute;
+	top: 0px;
+	left: 15px;
 }
 
 .remove, .edit{
@@ -109,4 +127,12 @@
 
 #opt-www-label {
 	color: #000 !important;
+}
+
+.table-col {
+	text-align: center;
+}
+
+.btn:focus {
+	outline: none;
 }

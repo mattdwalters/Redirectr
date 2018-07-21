@@ -4,7 +4,7 @@
 		<title>Test</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link rel = "stylesheet" type = "text/css" href = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
-		<link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Quicksand|Nunito" rel="stylesheet">
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="js/scripts.js"></script>
 	</head>
@@ -17,15 +17,19 @@
 					<h3>Options</h3>
 					<div id = "checkbox-container" class="form-group">
 						<input id = "opt-www" class = "opt-box" type="checkbox" checked>
-						<label for="opt-www" style = "color: #000; font-weight: lighter !important">Append www.</label>
+						<label for="opt-www" style = "color: #000; font-weight: lighter !important">Add www.</label>
+						<br>
+						<input id = "opt-warn" class = "opt-box" type="checkbox">
+						<label for="opt-warn" style = "color: #000; font-weight: lighter !important">Suppress warnings</label>
 					</div>
 				</div>
 			</div>
 
-			<button id = "options" clsas = "front">&#9965;</button>
+			<button id = "options" clsas = "front">&#9788;</button>
 		</div>
 		<div class = "popup-body">
-			<h3>Redirectr</h3>
+			<img id = "logo" src = "images/redirectr_logo.png">
+			<h3 id = "header">Redirectr</h3>
 			<p id = "notification" class = "text-danger bg-danger hidden">fds</p>
 			<div class = "container">
 		    	<form>
