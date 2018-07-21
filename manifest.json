@@ -1,9 +1,14 @@
 {
 	"manifest_version": 2,
 	"name": "Redirectr",
-	"description": "Easily setup redirects within chrome.",
-	"version": "1",
+	"description": "Easily set up site redirects so you can see the sites you want to visit!",
+	"version": "1.0",
 	"author": "Matt Walters",
+
+	"icons": {
+		"16": "images/redirectr_logo.png",
+        "48": "images/redirectr_logo.png",
+        "128": "images/redirectr_logo.png" },
 	
 	"background": {
 		"scripts":["js/redirect.js"]
