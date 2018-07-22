@@ -14,8 +14,11 @@
 	height: 50px;
 }
 
-#header {
+#logo-title {
 	margin-top: 0;
+}
+
+.header {
 	font-family: Nunito;
 }
 

@@ -30,8 +30,9 @@ function tableAdd(site, redirect, rdrNum) {
 		var row = table_body.insertRow();
 		var cell_edit = row.insertCell(0);
 		var cell_site = row.insertCell(1);
-		var cell_rdr = row.insertCell(2);
-		var cell_del = row.insertCell(3);
+		var cell_arr = row.insertCell(2);
+		var cell_rdr = row.insertCell(3);
+		var cell_del = row.insertCell(4);
 		
 		var btn = document.createElement('button');
 		btn.type = "button";
@@ -44,6 +45,8 @@ function tableAdd(site, redirect, rdrNum) {
 		
 		cell_site.innerHTML = site;
 		cell_site.id = "site_val";
+		cell_arr.innerHTML = "&rarr;";
+		cell_arr.id = "rdr_arr";
 		cell_rdr.innerHTML = redirect;
 		cell_rdr.id = "redirect_val";
 		
@@ -94,10 +97,13 @@ function addRedirect() {
 		$("#redirect").val("");
 		
 		var add_btn = $("#add");
-		console.log(add_btn.text());
 		add_btn.html("&#10004;");
+		add_btn.css("background-color", "#fff");
+		add_btn.css("color", "#5487dc");
 		setTimeout(function() {
 			add_btn.html("Add");
+			add_btn.css("background-color", "#5487dc")
+			add_btn.css("color", "#fff");
 		}, 1100);
 	}
 }
