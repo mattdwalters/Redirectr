@@ -1,5 +1,5 @@
 function getRedirects() {
-	str = localStorage.getItem('redirects'); 
+	str = localStorage.getItem('redirects') || '[]'; 
 	return JSON.parse(str);
 }
 
